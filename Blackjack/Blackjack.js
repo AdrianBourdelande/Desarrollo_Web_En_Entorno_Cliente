@@ -40,7 +40,7 @@ function pedirCarta (mano){
 function valorarCarta (carta){
     let valor = carta.split("_",1);
     if(valor=="J"||valor=="Q"||valor=="K"){
-        valor=10;
+        valor=11;
     }else if(valor=="A"){
         valor=1;
     }else{

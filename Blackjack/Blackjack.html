@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <script src="/Blackjack/Blackjack.js"></script>
-    <div id="dealer"></div>
-    <div id="jugador"></div>
+    <div id="tablero">
+        <!-- <img src="./img/Background.jpeg" alt="tablero" id="fondo"> -->
+        <div id="puntuaciones">
+            <div>
+                <p>Puntacion Dealer</p>
+                <p>Puntuacion Jugador</p>
+                <button>PEDIR CARTA</button>
+                <button>PLANTARSE</button>
+            </div>
+        </div>
+        <div id="jugadores">
+            <div id="dealer">
+                <img src="./img/grey_back.png" alt="" class="carta">
+                <img src="./img/grey_back.png" alt="" class="carta">
+                <img src="./img/grey_back.png" alt="" class="carta">
+                <img src="./img/grey_back.png" alt="" class="carta">
+                <img src="./img/grey_back.png" alt="" class="carta">
+            </div>
+            <div id="jugador">
+                <img src="./img/blue.png" alt="" class="carta">
+                <img src="./img/blue.png" alt="" class="carta">
+                <img src="./img/blue.png" alt="" class="carta">
+                <img src="./img/blue.png" alt="" class="carta">
+                <img src="./img/blue.png" alt="" class="carta">
+            </div>
+        </div>
+        <div id="baraja">
+            <img src="./img/red_back.png" alt="" class="carta">
+        </div>
+    </div>
 </body>
 </html>

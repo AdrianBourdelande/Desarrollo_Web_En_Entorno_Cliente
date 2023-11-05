@@ -1,0 +1,33 @@
+body{
+    
+    background-color: black;
+}
+#tablero{
+    background-image: url('./img/Background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    width: 80%;
+    border:2px red solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height:650px;
+}
+#fondo{
+    width: 100%;
+}
+.carta{
+    width: 150px;
+}
+#jugadores{
+
+    border:2px blue solid;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
