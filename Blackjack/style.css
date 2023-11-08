@@ -1,19 +1,21 @@
 body{
-    
     background-color: black;
+    background-image: url('./img/wood.jpg');
 }
 #tablero{
     background-image: url('./img/Background.jpeg');
-    background-repeat: no-repeat;
+    background-repeat: round;
     background-size: cover;
     margin: auto;
-    width: 80%;
-    border:2px red solid;
+    width: 90%;
     display: flex;
+    border: solid 2px whitesmoke;
+    border-radius: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height:650px;
+    margin-top: 5%;
 }
 #fondo{
     width: 100%;
@@ -22,12 +24,59 @@ body{
     width: 150px;
 }
 #jugadores{
-
-    border:2px blue solid;
+    
+    
     height: 100%;
     width: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-between;
+}
+#baraja{
+    width: 14%;
+}
+#puntuaciones{
+    width: 14%;
+}
+#dealer{
+    width: 100%;
+    margin-top: 10px;
+}
+#jugador{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.resultado{
+    position: fixed;
+    left:30%;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: black;
+    border: whitesmoke 3px solid;
+    border-radius: 20px;
+}
+.button{
+    border: whitesmoke 2px solid;
+    border-radius:5px;
+    background-color: black;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.puntua{
+    border: whitesmoke 2px solid;
+    border-radius:5px;
+    background-color: black;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
