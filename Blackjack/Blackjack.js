@@ -137,6 +137,12 @@ pedirButton.addEventListener("click", function () {
             tablero.appendChild(resultado);
             resultado.textContent = `${name} ha perdido`;
             resultado.className = "resultado";
+        }
+        if((contador_J==contador_D)&&contador_J<22){
+            let resultado = document.createElement("div");
+            tablero.appendChild(resultado);
+            resultado.textContent = `Empate!`;
+            resultado.className = "resultado";
         }        
     }      
 });
