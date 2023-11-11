@@ -1,5 +1,5 @@
-//let name = prompt("Introduzca su nombre");
-let name = "Adrian";
+let name = prompt("Introduzca su nombre");
+//let name = "Adrian";
 //clubs (♣), diamonds (♦), hearts (♥) and spades (♠)
 let baraja = [
                 ["A_c","2_c","3_c","4_c","5_c","6_c","7_c","8_c","9_c","10_c","J_c","Q_c","K_c"],
@@ -20,12 +20,14 @@ let puntuacion_D=[];
 puntuacion_D[0]=0;
 let puntuacion_J=[];
 puntuacion_J[0]=0;
+let empate = false;
 const pedirButton = document.getElementById("pedirButton");
 const plantarseButton = document.getElementById("plantarseButton");
 const jugadorNombre = document.getElementById("jugadornombre");
 const dealer = document.getElementById("dealer");
 const puntuacionDealer = document.getElementById("puntuacionDealer");
 const puntuacionJugador = document.getElementById("puntuacionJugador");
+puntuacionJugador.textContent =`Puntuacion ${name}: ${puntuacion_J[l]}`;
 const jugador = document.getElementById("jugador");
 const tablero = document.getElementById("tablero");
 
@@ -45,7 +47,7 @@ function pedirCarta (mano){
     //para hacer esto se quita esa carta de la baraja y por lo tanto el array pierde una posicion
     //Si luego se va a sacar otra carta de ese array y resulta que se va a la posicion 12 esta no existe ya que
     //al haberse restado una carta solo hay de la posicion 0 hasta la 11. 
-    //Para evitar esto se fiiltra con un while esa situacion y de darse se saca otra carta hasta que salga una
+    //Para evitar esto se filtra con un while esa situacion y de darse se saca otra carta hasta que salga una
     //que si exista en la baraja.
     while(typeof carta_aleatoria==="undefined"){
         num1=numeroAleatorio(0,3);
@@ -84,7 +86,7 @@ function pintarTablero (){
                     resultado.className = "resultado";
                 }                 
             }, 1000);                    
-        }, tiempo= tiempo+2000);
+        }, tiempo= tiempo+500);
     }    
 }
 
@@ -124,7 +126,7 @@ pedirButton.addEventListener("click", function () {
         jugador.appendChild(nuevaImagenJugador[l]);    
         contador_J=contador_J+ valorarCarta(mano_J[l]);
         puntuacion_J[l]=contador_J;
-        puntuacionJugador.textContent =`Puntuacion Jugador: ${puntuacion_J[l]}`;    
+        puntuacionJugador.textContent =`Puntuacion ${name}: ${puntuacion_J[l]}`;    
         l=l+1;
         if((contador_J>contador_D)&&contador_J<22){
             let resultado = document.createElement("div");
@@ -138,13 +140,19 @@ pedirButton.addEventListener("click", function () {
             resultado.textContent = `${name} ha perdido`;
             resultado.className = "resultado";
         }
-        if((contador_J==contador_D)&&contador_J<22){
-            let resultado = document.createElement("div");
-            tablero.appendChild(resultado);
-            resultado.textContent = `Empate!`;
-            resultado.className = "resultado";
+        if((contador_J==contador_D)&&contador_J<22){            
+            empate = true;
+
         }        
     }      
+});
+plantarseButton.addEventListener("click", function(){
+    if(empate==true){
+        let resultado = document.createElement("div");
+        tablero.appendChild(resultado);
+        resultado.textContent = `Empate!`;
+        resultado.className = "resultado";
+    }
 });
 
 
