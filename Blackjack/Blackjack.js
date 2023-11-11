@@ -86,7 +86,7 @@ function pintarTablero (){
                     resultado.className = "resultado";
                 }                 
             }, 1000);                    
-        }, tiempo= tiempo+500);
+        }, tiempo= tiempo+2000);
     }    
 }
 
