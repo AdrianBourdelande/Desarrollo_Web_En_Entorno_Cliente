@@ -1,5 +1,5 @@
-//let name = prompt("Introduzca su nombre");
-let name = "Adrian";
+let name = prompt("Introduzca su nombre");
+//let name = "Adrian";
 // GENERAMOS LA BARAJA
 let baraja = [];
 let palos = ["H","C","S","D"];
@@ -50,7 +50,7 @@ for(let i=0; i<manoDealer.length;i++){
             let resultado = document.createElement("div");
             document.body.prepend(resultado);
             resultado.className = "resultado green";
-            resultado.textContent = "Gana el jugador";
+            resultado.textContent = `Gana ${name}`;
         }
     }, tiempo);
     tiempo= tiempo + 1000;    
@@ -60,6 +60,7 @@ const pedirButton = document.getElementById("pedirButton");
 const plantarseButton = document.getElementById("plantarseButton");
 const jugador = document.getElementById("jugador");
 const puntuacionJugador = document.getElementById("puntuacionJugador");
+puntuacionJugador.textContent = `Puntuacion ${name}:`;
 let valorManoJugador = 0;
 
 pedirButton.addEventListener("click", function(){
@@ -69,13 +70,13 @@ pedirButton.addEventListener("click", function(){
     carta.src = `${cartaActual.imagen}`;
     jugador.appendChild(carta);
     valorManoJugador = valorManoJugador + cartaActual.valor;
-    puntuacionJugador.textContent = "Puntuacion Jugador: " + valorManoJugador;
+    puntuacionJugador.textContent = `Puntuacion ${name}: ${valorManoJugador}`;
     
     if(valorManoDealer<valorManoJugador&&valorManoJugador<22){
         let resultado = document.createElement("div");
         document.body.prepend(resultado);
         resultado.className = "resultado green";
-        resultado.textContent = "Gana el jugador";        
+        resultado.textContent = `Gana ${name}`;        
     }
     if(valorManoJugador>21){
         let resultado = document.createElement("div");
