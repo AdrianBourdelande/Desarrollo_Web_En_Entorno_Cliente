@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+    background-image: url('./img/SL-120319-25700-30.jpg');
+}
+#tablero{
+    /* background-image: url('./img/header.png');
+    background-repeat: round;
+    background-size: auto; */
+    align-items: center;
+    background-color: rgba(255, 213, 254, 0.231); 
+    border: solid 20px rgba(254, 194, 8, 0.8);
+    border-radius: 100px;
+    display: flex;  
+    flex-wrap: wrap; 
+    height:650px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5%;
+    width: 90%;
+}
+#fondo{
+    width: 100%;
+}
+.carta{
+    margin-left: 5px;
+    width: 150px;    
+}
+#jugadores{    
+    align-content: space-between; 
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+    width: 60%;
+    
+}
+#baraja{
+    width: 14%;
+}
+#puntuaciones{
+    width: 16%;
+}
+#dealer{
+    margin-top: 10px;
+    width: 100%;    
+}
+#jugador{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.resultado{
+    background-color: black;
+    border: whitesmoke 3px solid;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Ruslan Display', sans-serif;
+    font-size: 100px;
+    left:25%;
+    margin-top: 14%;
+    padding: 20px;
+    position: fixed;
+    text-align: center;   
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: rgb(6, 225, 6);
+}
+.button{
+    background-color: black;
+    border: 4px solid rgba(254, 194, 8);
+    border-radius:5px;
+    color: rgba(254, 194, 8);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 10%;
+    padding: 10px;
+}
+.button:hover{
+    background-color: blueviolet;
+    border: 4px solid whitesmoke;
+    color: whitesmoke;
+}
+.puntua{
+    background-color: black;
+    border: 4px solid rgba(254, 194, 8);
+    border-radius:5px;
+    color:rgba(254, 194, 8);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding: 10px;    
+}

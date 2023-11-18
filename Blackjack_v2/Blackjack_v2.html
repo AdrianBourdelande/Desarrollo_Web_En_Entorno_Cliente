@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js
+    "></script>
+    <script src="./Card.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
+    <title>Blackjack v2</title>
+    <link rel="stylesheet" href="./style_v2.css">
+</head>
+<body>
+    
+    <div id="tablero">
+        <div id="puntuaciones">
+            <div>
+                <p id="puntuacionDealer" class="puntua">Puntuación Dealer: </p>
+                <p id="puntuacionJugador" class="puntua">Puntuacion Jugador: </p>
+                <button id="pedirButton" class="button">PEDIR CARTA</button>
+                <button id="plantarseButton" class="button">PLANTARSE</button>
+            </div>
+        </div>
+        <div id="jugadores">
+            <div id="dealer">
+            </div>
+            <div id="jugador">
+            </div>
+        </div>
+        <div id="baraja">
+            <img src="./img/gold_black.png" alt="" class="carta">
+        </div>
+    </div>
+    
+    <script src="./Blackjack_v2.js"></script>   
+</body>
+</html>
