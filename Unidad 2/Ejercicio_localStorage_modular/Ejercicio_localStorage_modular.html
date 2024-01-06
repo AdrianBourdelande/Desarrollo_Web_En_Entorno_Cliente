@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: rgb(255, 217, 217);
+        }
+        #container{
+            margin: auto;
+            width: 90%;
+        }
+        #localStorageContainer{
+            background-color: orange;
+        }
+        #sessionStorageContainer{
+            background-color: rgb(0, 167, 111);
+        }
+        #cookiesContainer{
+            background-color: rgb(116, 6, 52);
+        }
+        #actualesContainer{
+            background-color: rgb(253, 236, 103);
+        }
+        .whiteText{
+            color: white;
+        }
+    </style>
+    <title>WebStorage MODULAR</title>
+</head>
+<body>
+    <div id="container">
+        <h2 class="mt-4">WebStorage</h2>
+        <div class="row mt-4 whiteText">
+            <div id="localStorageContainer" class="col-4">
+                <h4>Local storage</h4>
+                <h5>Individual</h5>
+                <input type="color" id="colorLS">
+                <form id="formLS">
+                    <label for="claveLS" class="form-label">Clave</label>
+                    <input type="text" name="claveLS" id="claveLS" class="input form-control mb-2">
+                    <label for="valorLS" class="form-label">Valor</label>
+                    <input type="text" name="valorLS" id="valorLS" class="input form-control mb-2">
+                    <button type="submit" class="btn btn-primary mb-4">Agregar par</button>
+                </form> 
+                <form id="formLSObjeto">
+                    <label for="nombreLSObjeto" class="form-label">Nombre</label>
+                    <input type="text" name="nombreLSObjeto" id="nombreLSObjeto" class="input form-control mb-2">
+                    <label for="apellidoLSObjeto" class="form-label">Apellido</label>
+                    <input type="text" name="apellidoLSObjeto" id="apellidoLSObjeto" class="input form-control mb-2">
+                    <label for="telefonoLSObjeto" class="form-label">Teléfono</label>
+                    <input type="number" name="telefonoLSObjeto" id="telefonoLSObjeto" class="input form-control mb-2">
+                    Disponibilidad <input type="checkbox" id="disponibilidadLS"><br><br>
+                    <button type="submit" class="btn btn-primary mb-4">Agregar objeto</button>
+                </form>   
+                <form id="LSBorrar">
+                    <label for="seleccionarClaveLS" class="form-label">Selecciona una clave</label>                    
+                    <select name="seleccionarClaveLS" id="seleccionarClaveLS" class="input form-control mb-2">
+                    
+                    </select>
+                    <button type="submit" class="btn btn-primary mb-4">Borrar</button>
+                </form>             
+            </div>
+            <div id="sessionStorageContainer" class="col-4">
+                <h4>Session storage</h4>
+                <h5>Individual</h5>
+                <input type="color" id="colorSS">
+                <form id="formSS">
+                    <label for="claveSS" class="form-label">Clave</label>
+                    <input type="text" name="claveSS" id="claveSS" class="input form-control mb-2">
+                    <label for="valorSS" class="form-label">Valor</label>
+                    <input type="text" name="valorSS" id="valorSS" class="input form-control mb-2">
+                    <button type="submit" class="btn btn-primary mb-4">Agregar par</button>
+                </form>  
+                <form id="formSSObjeto">
+                    <label for="nombreSSObjeto" class="form-label">Nombre</label>
+                    <input type="text" name="nombreSSObjeto" id="nombreSSObjeto" class="input form-control mb-2">
+                    <label for="apellidoSSObjeto" class="form-label">Apellido</label>
+                    <input type="text" name="apellidoSSObjeto" id="apellidoSSObjeto" class="input form-control mb-2">
+                    <label for="telefonoSSObjeto" class="form-label">Teléfono</label>
+                    <input type="number" name="telefonoSSObjeto" id="telefonoSSObjeto" class="input form-control mb-2">
+                    Disponibilidad <input type="checkbox" id="disponibilidadSS"><br><br>
+                    <button type="submit" class="btn btn-primary mb-4">Agregar objeto</button>
+                </form> 
+                <form id="SSBorrar">
+                    <label for="seleccionarClaveSS" class="form-label">Selecciona una clave</label>
+                    <select name="seleccionarClaveSS" id="seleccionarClaveSS" class="input form-control mb-2">
+                    
+                    </select>
+                    <button type="submit" class="btn btn-primary mb-4">Borrar</button>
+                </form> 
+            </div>
+            <div id="cookiesContainer" class="col-4">
+                <h4>Cookies</h4>
+                <input type="color" id="colorCookies">
+                <form id="formCookies">
+                    <label for="claveCookies" class="form-label">Clave</label>
+                    <input type="text" name="claveCookies" id="claveCookies" class="input form-control mb-2">
+                    <label for="valorCookies" class="form-label">Valor</label>
+                    <input type="text" name="valorCookies" id="valorCookies" class="input form-control mb-2">
+                    <label for="expiracionCookies" class="form-label">Expiración</label>
+                    <input type="number" name="expiracionCookies" id="expiracionCookies" class="input form-control mb-2">
+                    <button type="submit" class="btn btn-primary mb-4">Agregar</button>
+                </form>  
+                <form id="cookiesBorrar">
+                    <label for="seleccionarCookie" class="form-label">Selecciona una cookie</label>
+                    <select name="seleccionarCookie" id="seleccionarCookie" class="input form-control mb-2">
+
+                    </select>
+                    <button type="submit" class="btn btn-primary mb-4">Borrar</button>
+                </form> 
+            </div>
+        </div>
+        <div class="row mt-4 whiteText" id="actualesContainer">    
+            <h4>Actuales</h4> 
+            <div>
+                <input type="color" id="colorActuales">
+            </div>            
+            <div id="localStorageActuales" class="col-4">
+                <form id="actualesLS">
+                </form>
+            </div>   
+            <div id="localSessionActuales" class="col-4">
+                <form id="actualesSS">
+                </form>
+            </div>  
+            <div id="cookiesActuales" class="col-4">
+                <form id="actualesCookies">
+                </form>
+            </div>  
+        </div>
+    </div>
+    
+    <script src="./main.js" type="module"></script>
+</body>
+</html>

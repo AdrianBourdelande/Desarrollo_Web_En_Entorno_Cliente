@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        form, #conversiones{
+            margin: auto;
+            padding: 3%;
+            text-align: center;
+            width: 30%;
+        }
+        input{
+            background-color: black;
+        }
+    </style>
+    <title>Ejercicios propuestos Javascript: Ejercicio 06</title>
+</head>
+<body>
+    <form >
+        <label for="numero" class="form-label">Introduce el valor a convertir</label>
+        <input type="number" name="numero" id="numero" step="0.01" min="0" class="input form-control mb-2">
+        <select name="seleccion" id="seleccion" class="form-select">
+            <option value="option0">Convertir de $ a €</option>
+            <option value="option1">Convertir de € a $</option>
+            <option value="option2">Convertir de mm a m</option>
+            <option value="option3">Convertir de m a mm</option>
+            <option value="option4">Convertir de F a C</option>
+            <option value="option5">Convertir de C a F</option>
+        </select>
+        <button type="submit" id="convertir" class="btn btn-primary mt-2">Convertir</button>
+    </form>
+    <div id="conversiones">
+
+    </div>
+    <script src="./Ejercicio_06.js"></script>
+</body>
+</html>
