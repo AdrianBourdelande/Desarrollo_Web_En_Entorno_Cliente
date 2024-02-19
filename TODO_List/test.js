@@ -1,0 +1,1 @@
+let promesa = new Promise ();

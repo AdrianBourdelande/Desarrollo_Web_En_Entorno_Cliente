@@ -32,10 +32,23 @@ class Tarea{
 }
 
 
-// DUDA: cuando pulso el boton completar lo que hago es filtrar el array donde he guardado las tarjetas y lo que hago es
-//       sobreescribir el array completo excepto un elemento, el elemento cuyo id coincide con el id del elemento padre del boton
-//       pulsado.
-//       El sentido común me dice que habría que modificar la propiedad checked del checkbox de la tarjeta completada y luego filtrar
-//       según las tareas que este completadas o no
-//
-//DUDA2: no sabia como hace un id estático en la clase y le generé el id en el toDo.js de forma externa a la instancia de la clase Tarea
+// DUDA: cuando pulso el boton completar lo que hago es filtrar el array donde he guardado las 
+//tarjetas y lo que hago es sobreescribir el array completo excepto un elemento, el elemento cuyo 
+//id coincide con el id del elemento padre del boton pulsado.
+//El sentido común me dice que habría que modificar la propiedad checked del checkbox de la tarjeta 
+//completada y luego filtrar según las tareas que este completadas o no
+
+//DUDA2: no sabia como hace un id estático en la clase y le generé el id en el toDo.js de forma 
+//externa a la instancia de la clase Tarea
+
+// Preguntarle a Carla por las fechas para tener las practicas acabadas.
+//Indra Minsait (posible teleprácticas)     (muchas prácticas)
+//NTTData (posible teleprácticas)           (muchas prácticas)
+//Deloitte (presencial y teleprácticas)     (muchas prácticas)
+
+//Accenture?
+    //Accenture technology
+    //Capgemini 
+    //Izertis
+
+    //Mecalux Gijón

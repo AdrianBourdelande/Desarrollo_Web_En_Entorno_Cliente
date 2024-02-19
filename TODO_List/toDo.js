@@ -55,6 +55,7 @@ tareas.addEventListener('click', (e) => {
         pilaTareas = pilaTareas.filter((tarea) => tarea.id!=e.target.parentElement.id);
         desplegarTareas(pilaTareas);
     }
+    // Remove the parent of the button
     if(select[1].value=='todas'){
         actualizarBusqueda('todas');
     }
