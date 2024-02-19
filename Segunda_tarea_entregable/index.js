@@ -7,6 +7,7 @@ let carritoList = [];
 async function obtenerProductos() {
     const response = await fetch('https://dummyjson.com/products');
     const responseJson = await response.json();
+    console.log(responseJson);
     return responseJson;    
 };
 
@@ -14,17 +15,20 @@ function generarTarjetaHTML(){
     const card = document.createElement('div');
     productos.appendChild(card);
     const title = document.createElement('h3');
+    const category = document.createElement('h5');
     const brand = document.createElement('h2');
     const price = document.createElement('h1');
     const image = document.createElement('img');
     const button = document.createElement('button');
     card.appendChild(brand);
     card.appendChild(title);
+    card.appendChild(category);
     card.appendChild(image);
     card.appendChild(price);
     card.appendChild(button);
     brand.innerHTML = tarjeta.brand;
     title.innerHTML = tarjeta.title;
+    category.innerHTML = tarjeta.category;
     image.src = tarjeta.image;
     image.style.width = '80%';
     image.style.borderRadius = '15px';
