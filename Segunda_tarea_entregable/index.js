@@ -42,7 +42,7 @@ function generarTarjetaHTML(){
     card.style.textAlign = 'center';
     card.style.alignItems = 'center';
     button.className = 'btn btn-primary mb-2 anadir';
-    button.innerHTML = 'Añadir';  
+    button.innerHTML = 'Añadir a carrito';  
     card.id=tarjeta.id;
 
 };
