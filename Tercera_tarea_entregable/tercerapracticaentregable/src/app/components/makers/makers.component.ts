@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Manufacturer } from '../../model/manufacturer';
 import { ManufacturerService } from '../../service/manufacturers.service';
+import { Cartosell } from '../../model/cartosell';
 
 @Component({
   selector: 'app-makers',
@@ -53,6 +54,7 @@ export class MakersComponent {
     "SUBARU": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Subaru_logo.svg/1024px-Subaru_logo.svg.png"    
   };
   manufacturers: Manufacturer [] = [];
+ 
   
     constructor(private servicio: ManufacturerService ) {
       

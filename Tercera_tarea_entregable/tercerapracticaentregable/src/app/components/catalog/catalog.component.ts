@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CatalogService } from '../../service/catalog.service';
 import { Cartosell } from '../../model/cartosell';
+import { FavouritesService } from '../../service/favourites.service';
+
 
 @Component({
   selector: 'app-catalog',
@@ -13,6 +15,7 @@ export class CatalogComponent {
   
   cartosell: Cartosell [] = [];
   cartosellFiltered: Cartosell [] = [];
+  favourites: Cartosell[] = [];
   //Dado que la API no me proporciona los precios de los autos, los he colocado manualmente para tener más datos que mostrar 
   prices = [
     59556,
@@ -556,10 +559,11 @@ export class CatalogComponent {
   model: string [] = [];
   manufacturerSelected: string = '';
   
-  constructor(private servicio: CatalogService ) {
+  constructor(private servicio: CatalogService, private favouritesService: FavouritesService ) {
     this.servicio.getAllCars().subscribe((item) => {
       item.forEach((element: Cartosell, index: number) => {
-        element.price = this.prices[index];        
+        element.price = this.prices[index];
+        element.favourite = false;        
       }); 
       this.cartosell = item;
       this.getManufacturer();
@@ -586,5 +590,12 @@ export class CatalogComponent {
         return element.title.split(' ')[0] == this.manufacturerSelected;
       }); 
     }
-}
+  }
+  addToFavourites(car: Cartosell){
+    car.favourite = true;
+    this.favourites.push(car);
+    this.favouritesService.changeFavourites([...this.favourites]);
+    console.log(this.favourites);
+
+  }
 }

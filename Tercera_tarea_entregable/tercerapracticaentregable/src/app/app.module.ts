@@ -12,6 +12,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CatalogService } from './service/catalog.service';
 import { FormsModule } from '@angular/forms';
 import { ShowcarmodelsComponent } from './components/showcarmodels/showcarmodels.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ShowcarmodelsComponent } from './components/showcarmodels/showcarmodels
     MakersComponent,
     HomeComponent,
     CatalogComponent,
-    ShowcarmodelsComponent
+    ShowcarmodelsComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,

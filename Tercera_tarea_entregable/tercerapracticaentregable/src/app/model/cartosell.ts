@@ -3,5 +3,6 @@ export interface Cartosell  {
     "title": string,
     "start_production": Number,
     "class": string,
-    "price": Number
+    "price": Number,
+    "favourite": boolean
     }

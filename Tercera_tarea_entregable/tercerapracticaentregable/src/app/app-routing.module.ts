@@ -5,6 +5,7 @@ import { MakersComponent } from './components/makers/makers.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShowcarmodelsComponent } from './components/showcarmodels/showcarmodels.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'models/:id',
     component: ShowcarmodelsComponent
+  },
+  {
+    path: 'favourites',
+    component: FavouritesComponent 
   },
   {
     path: '**',
